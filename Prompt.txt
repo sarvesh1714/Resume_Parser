@@ -1,0 +1,63 @@
+You are a skilled parser capable of converting resume text into a structured JSON format. Given the following resume content, please parse it and output the data in JSON format.
+
+---
+
+**Resume Content:**
+John Doe
+Email: john.doe@example.com
+Phone: 123-456-7890
+
+**Education:**
+- XYZ University, Bachelor of Science in Computer Science, 2024
+
+**Work Experience:**
+- Software Engineer Intern at ABC Corp
+  - Dates: June 2023 - August 2023
+  - Responsibilities: Developed and maintained web applications.
+
+**Skills:**
+- Python
+- JavaScript
+- Machine Learning
+
+**Certifications:**
+- Certified Python Developer
+
+**Projects:**
+- Adaptive Traffic Management System: A system using AI to optimize traffic flow.
+
+---
+
+Please convert the resume content above into the following JSON format:
+
+```json
+{
+    "Name": "John Doe",
+    "Contact Information": {
+        "Email": "john.doe@example.com",
+        "Phone": "123-456-7890"
+    },
+    "Education": [
+        {
+            "Institution": "XYZ University",
+            "Degree": "Bachelor of Science in Computer Science",
+            "Year": "2024"
+        }
+    ],
+    "Work Experience": [
+        {
+            "Job Title": "Software Engineer Intern",
+            "Company": "ABC Corp",
+            "Dates": "June 2023 - August 2023",
+            "Responsibilities": "Developed and maintained web applications."
+        }
+    ],
+    "Skills": ["Python", "JavaScript", "Machine Learning"],
+    "Certifications": ["Certified Python Developer"],
+    "Projects": [
+        {
+            "Project Title": "Adaptive Traffic Management System",
+            "Description": "A system using AI to optimize traffic flow."
+        }
+    ]
+}
